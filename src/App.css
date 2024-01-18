@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  word-break: keep-all;
+}
+
+#top-navbar{
+  margin: auto;
+  background-color: #FFFFFF;
+}
+
+#top-content--header{
+  margin: 0px auto;
+  color: white;
+  background-color: #666666;
+  height: 520px;
+  position: relative;
+  padding: 100px;
+}
+
+.content__box{
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
+
+.content__text{
+  font-size: 40px;
+}
