@@ -13,6 +13,7 @@ function App() {
           <Navbar.Brand href="#home">SideHub</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#project">프로젝트</Nav.Link>
+            <Nav.Link href="#project">프로젝트</Nav.Link>
             <Nav.Link href="#portfolio">포트폴리오</Nav.Link>
             <Nav.Link href="#study">스터디</Nav.Link>
           </Nav>
