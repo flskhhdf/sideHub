@@ -4,8 +4,17 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useState } from 'react';
+import { Modal_Login, Modal_Signup } from './modal';
 
 function App() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
+
+  const handleClose = () => {setShowLogin(false); setShowSignup(false);}
+  const handleShowLogin = () => setShowLogin(true);
+  const handleShowSignup = () => setShowSignup(true);
+
   return (
     <div className="App">
       <Navbar data-bs-theme="light" id="top-navbar">
@@ -17,8 +26,8 @@ function App() {
             <Nav.Link href="#study">스터디</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#signin">로그인</Nav.Link>
-            <Nav.Link href="#signup">회원가입</Nav.Link>
+            <Nav.Link onClick={handleShowLogin}>로그인</Nav.Link>
+            <Nav.Link onClick={handleShowSignup}>회원가입</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -30,6 +39,14 @@ function App() {
           <Button variant="secondary">프로젝트 만들기</Button>{' '}
         </div>
 
+        <Modal_Login
+          show={showLogin}
+          handleClose={handleClose}
+        />
+        <Modal_Signup
+          show={showSignup}
+          handleClose={handleClose}
+        />
       </div>
     </div>
   );
