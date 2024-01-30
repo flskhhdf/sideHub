@@ -4,8 +4,17 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useState } from 'react';
+import { Modal_Login, Modal_Signup } from './modal';
 
 function App() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
+
+  const handleClose = () => {setShowLogin(false); setShowSignup(false);}
+  const handleShowLogin = () => setShowLogin(true);
+  const handleShowSignup = () => setShowSignup(true);
+
   return (
     <div className="App">
       {/* nav start */}
@@ -29,8 +38,6 @@ function App() {
               <Nav.Link href="#signup">회원가입</Nav.Link>
             </Nav>
           </Container>
-
-          
         </Container>
       </Navbar>
       {/* nav end */}
@@ -134,6 +141,14 @@ function App() {
 
 
 
+        <Modal_Login
+          show={showLogin}
+          handleClose={handleClose}
+        />
+        <Modal_Signup
+          show={showSignup}
+          handleClose={handleClose}
+        />
       </div>
       {/* content wrapper end */}
 
