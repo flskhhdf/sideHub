@@ -3,6 +3,8 @@
   word-break: keep-all;
 }
 
+
+
 /* menubar */
 #top-navbar{
   margin: auto;
@@ -13,7 +15,14 @@
   flex-direction: row-reverse;
 }
 
+a{
+  text-decoration: none;
+}
 
+/* 스크롤바 없애기*/
+body::-webkit-scrollbar {
+  display: none;
+} 
 
 /* content-wrapper 공통 */
 .content-wrapper{

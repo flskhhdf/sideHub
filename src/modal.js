@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function Modal_Login({ show, handleClose }) {
+function ModalLogin({ show, handleClose }) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,7 +18,6 @@ function Modal_Login({ show, handleClose }) {
   }
 
   const handleLogin = async () => {
-    // handleClose();
     const response = await axios.post('http://localhost:3002/signin', {
       email: email,
       password: password,
@@ -58,7 +57,7 @@ function Modal_Login({ show, handleClose }) {
   );
 }
 
-function Modal_Signup({ show, handleClose }) {
+function ModalSignup({ show, handleClose }) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -160,4 +159,4 @@ function Modal_Signup({ show, handleClose }) {
   );
 }
 
-export { Modal_Login, Modal_Signup };
+export { ModalLogin, ModalSignup };
