@@ -29,3 +29,10 @@ exports.signup = function(singupReq, signupRes){
         else { signupRes.json({return:'emailDuplicate'}); }
     })
 }
+
+exports.getData = function(getDataReq, getDataRes, callback) {
+    db.query(`SELECT * FROM board`,
+    function(getSuccessErr, getSuccessRes){
+        callback({data: getSuccessRes});
+    });
+}
