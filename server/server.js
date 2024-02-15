@@ -21,6 +21,12 @@ app.post('/signup', (req, res) => {
     db.signup(req.body, res);
 })
 
+app.get('/getData', (req, res) => {
+    db.getData(req,res,(result) => {
+        res.send(result.data)
+    });
+})
+
 server.listen(port, () => {
     console.log(`running server at http://localhost:${port}`);
 })

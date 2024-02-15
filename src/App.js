@@ -1,4 +1,3 @@
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Routes, Route, Link } from 'react-router-dom'
 import './App.css';
@@ -47,8 +46,8 @@ function App() {
 
           <Container id="right-nav-wrapper">
             <Nav>
-              <Nav.Link href="#signin" onClick={handleShowLogin}>로그인</Nav.Link>
-              <Nav.Link href="#signup" onClick={handleShowSignup}>회원가입</Nav.Link>
+              <Nav.Link onClick={handleShowLogin}>로그인</Nav.Link>
+              <Nav.Link onClick={handleShowSignup}>회원가입</Nav.Link>
             </Nav>
           </Container>
         </Container>

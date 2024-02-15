@@ -1,9 +1,8 @@
 .App {
   text-align: center;
   word-break: keep-all;
+  box-sizing: content-box;
 }
-
-
 
 /* menubar */
 #top-navbar{
@@ -45,7 +44,6 @@ body::-webkit-scrollbar {
   margin-bottom: 20px; 
 }
 
-
 /* welcome-content-wrapper */
 #welcome-content-wrapper{
   margin: 0px auto;
@@ -58,8 +56,6 @@ body::-webkit-scrollbar {
 #welcome-content-wrapper .content_box{
   margin-top: 60px;
 }
-
-
 
 /* best-portfolio-content-wrapper */
 #best-portfolio-content-wrapper{
@@ -175,3 +171,40 @@ body::-webkit-scrollbar {
   height: 200px;
   background-color: #ffffff;
 }
+
+/* 프로젝트 페이지 CSS */
+
+.project-wrapper{
+  width: 80%;
+  height: 350px;
+  margin: auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.project-list-wrapper{
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.list-wrapper{
+  width: 2000px;
+  display: flex;
+  height: 300px;
+}
+
+.project{
+  margin: 15px;
+  padding: 15px;
+  width: 300px;
+  height: 80%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* 프로젝트 페이지 CSS */
